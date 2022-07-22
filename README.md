@@ -16,46 +16,15 @@ Apps provided (make sure you do not install these via Ubuntu's package repos):
 
 **Core:**
   * Sway
+  * Trawl
   * wlroots
   * seatd
 
 **Apps:**
   * clipman
   * kanshi
-  * mako
-  * nwg-panel
-  * rofi wayland fork - Note: this is not part of the `apps` makefile target, yet, as people already have it installed via apt. Letting some time pass to do so.
   * swaylock-effects
-  * swayimg
-  * waybar
-  * wdisplays
-  * wf-recorder
-  * wofi - DEPRECATED: looks like the app has been abandoned. Use rofi wayland instead.
   * xdg-desktop-portal-wlr (for screen sharing)
-
-**Wayfire apps:**
-  * wayfire / wf-config / wcm
-  * wf-shell
-
-**Debs:**
-  * none
-
-**Deb rebuilds:**
-  * none
-
-### How about older Ubuntus?
-
-There are (unmaintained) branches of this project for earlier versions of Ubuntu. They won't receive any fixes,, but if you want to use them and want to send PRs with fixes these are welcome.
-
-I usually switch to the next ubuntu a few weeks before release, so typically old branches will have the very latest versions of the apps that are physically compilable given the libraries available.
-
-### How about the next (still in dev) version of Ubuntu
-
-No reason it won't work. The [debs](debs) files (if any) might pose a problem though as they are typically backported from the next Ubuntu version into the current when needed, and won't be needed on the next version, so make sure you tweak the Makefile not to install them.
-
-### How about arm (eg Raspberri PI)
-
-Should currently work, no binary packages are installed from this repo at the time of writing this.
 
 ## Prepare your system's environment
 
@@ -73,7 +42,7 @@ The value will almost certainly be completely different. I don't use arm so I ca
 
 ### Note: `sudo`
 
-Some operations require root to complete - typically anything that requires access to `/usr/local/`. See [Makefile](Makefile) for details.
+Some operations require root to complete - typically anything that requires access to '/usr/' or `/usr/local/`. See [Makefile](Makefile) for details.
 
 While building, `sudo` will be run at some point to do so, and your password will be asked.
 
@@ -112,7 +81,7 @@ make apps
 Simply pass `-e UPDATE=true` to `make`:
 
 ```
-make mako -e UPDATE=true
+make sway -e UPDATE=true
 ```
 
 ### App versions
