@@ -142,7 +142,7 @@ install-dependencies:
 	rustc --version || curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 fix-dependencies:
-	printf 'n\ny\ny\n' | sudo aptitude  libgbm-dev libjson-c-dev libsystemd-dev  libudev-dev
+	printf 'n\ny\ny\n' | sudo aptitude install libgbm-dev libjson-c-dev libsystemd-dev  libudev-dev
 
 clean-dependencies:
 	sudo apt autoremove --purge $(WLROOTS_DEPS) $(SWAY_DEPS) $(GTK_LAYER_DEPS) $(SWAYLOCK_DEPS) $(XDG_DESKTOP_PORTAL_DEPS)

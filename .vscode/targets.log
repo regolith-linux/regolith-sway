@@ -1,0 +1,450 @@
+make: *** No rule to make target 'all'.  Stop.
+
+# GNU Make 4.3
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Thu Jul 28 01:35:15 2022
+
+# Variables
+
+# makefile (from 'Makefile', line 16)
+CLIPMAN_VERSION = master
+# environment
+GDK_BACKEND = x11
+# environment
+LC_ALL = C
+# environment
+NO_AT_BRIDGE = 1
+# makefile (from 'Makefile', line 93)
+CLIPMAN_DEPS = 	golang-go
+# environment
+I3SOCK = /run/user/1000/i3/ipc-socket.1958
+# makefile (from 'Makefile', line 72)
+SWAY_DEPS = 	libjson-c-dev libpango1.0-dev libcairo2-dev libgdk-pixbuf2.0-dev scdoc
+# environment
+VSCODE_CWD = /home/soumya/regolith-sway
+# makefile (from 'Makefile', line 89)
+SWAYLOCK_DEPS = 	libpam0g-dev
+# makefile (from 'Makefile', line 97)
+XDG_DESKTOP_PORTAL_DEPS = 	libpipewire-0.3-dev libinih-dev
+# makefile (from 'Makefile', line 13)
+WAYLAN_VERSION = main
+# makefile (from 'Makefile', line 80)
+TRAWL_DEPS = 	 libglib2.0-dev 
+# default
+MAKE_COMMAND := make
+# environment
+QT_ACCESSIBILITY = 1
+# makefile (from 'Makefile', line 15)
+SWAYLOCK_VERSION = master
+# makefile (from 'Makefile', line 31)
+BASE_CLI_DEPS = 	git curl mercurial python3-pip aptitude
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# makefile (from 'Makefile', line 1)
+REQUIRED_UBUNTU_CODENAME = jammy
+# environment
+PWD = /home/soumya/regolith-sway
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+XDG_DATA_DIRS = /usr/share/regolith:/usr/share/gnome:/usr/local/share/:/usr/share/:/home/soumya/.local/share
+# environment
+OLDPWD = /home/soumya
+# makefile (from 'Makefile', line 43)
+WLROOTS_DEPS = 	wayland-protocols libwayland-dev libegl1-mesa-dev libgles2-mesa-dev libdrm-dev libgbm-dev libinput-dev libxkbcommon-dev libgudev-1.0-dev libpixman-1-dev libsystemd-dev cmake libpng-dev libavutil-dev libavcodec-dev libavformat-dev libxcb-composite0-dev libxcb-icccm4-dev libxcb-image0-dev libxcb-render0-dev libxcb-xfixes0-dev libxkbcommon-dev libxcb-xinput-dev libx11-xcb-dev libxcb-dri3-dev libxcb-res0-dev
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_CODE_CACHE_PATH = /home/soumya/.config/Code/CachedData/3b889b090b5ad5793f524b5d1d39fda662b96a2a
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session1
+# environment
+LANG = C
+# environment
+XAUTHORITY = /home/soumya/.Xauthority
+# default
+.LOADED := 
+# default
+.INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
+# environment
+GNOME_TERMINAL_SERVICE = :1.72
+# makefile
+MAKEFLAGS = pqrR
+# makefile
+CURDIR := /home/soumya/regolith-sway
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+MFLAGS = -pqrR
+# environment
+SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-regolith:/etc/xdg
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+XDG_SESSION_DESKTOP = Regolith:GNOME-Flashback:GNOME
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST := Makefile
+# automatic
+@F = $(notdir $@)
+# makefile (from 'Makefile', line 12)
+WLROOTS_VERSION = master
+# environment
+VSCODE_PID = 4502
+# environment
+MOZ_ENABLE_WAYLAND = 1
+# environment
+XDG_SESSION_TYPE = x11
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+SESSION_MANAGER = local/Regolith:@/tmp/.ICE-unix/1494,unix/Regolith:/tmp/.ICE-unix/1494
+# automatic
+*F = $(notdir $*)
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# makefile
+SHELL = /bin/sh
+# default
+MAKECMDGOALS := all
+# environment
+XMODIFIERS = @im=ibus
+# environment
+SHLVL = 2
+# environment
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/113c3223_cd09_433a_a636_b1ba69347ad2
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /home/soumya/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# default
+MAKEFILES := 
+# environment
+LANGUAGE = en_IN:en
+# automatic
+^F = $(notdir $^)
+# makefile (from 'Makefile', line 84)
+GTK_LAYER_DEPS = 	libgtk-layer-shell-dev libgtk-layer-shell0
+# makefile (from 'Makefile', line 102)
+PIP_PACKAGES = ninja meson
+# makefile (from 'Makefile', line 27)
+PREFIX = /usr 
+# environment
+COMPIZ_CONFIG_PROFILE = gnome-flashback
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# automatic
+?F = $(notdir $?)
+# environment
+DESKTOP_AUTOSTART_ID = 10877b7b7950c4eeb0165894906184376300000014940016
+# environment
+XDG_CURRENT_DESKTOP = Regolith:GNOME-Flashback:GNOME
+# environment
+LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+# automatic
++F = $(notdir $+)
+# environment
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+# environment
+DESKTOP_SESSION = regolith
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = Regolith:GNOME-Flashback:GNOME
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+LOGNAME = soumya
+# makefile (from 'Makefile', line 2)
+CURRENT_UBUNTU_CODENAME = $(shell lsb_release -cs)
+# environment
+STUDIO_JDK = /usr/lib/jvm/java-11-openjdk/
+# makefile
+.DEFAULT_GOAL := check-ubuntu-version
+# environment
+DISPLAY = :0
+# environment
+USER = soumya
+# default
+MAKE_VERSION := 4.3
+# makefile (from 'Makefile', line 39)
+WAYLAND_DEPS = 	libxml2-dev
+# environment
+SSH_AGENT_PID = 1559
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# makefile (from 'Makefile', line 14)
+KANSHI_VERSION = master
+# environment
+GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
+# environment
+COLORTERM = truecolor
+# environment
+XDG_SESSION_CLASS = user
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/soumya
+# environment
+QT_IM_MODULE = ibus
+# makefile (from 'Makefile', line 104)
+NINJA_CLEAN_BUILD_INSTALL = $(UPDATE_STATEMENT) sudo ninja -C build uninstall; sudo rm build -rf; meson build --prefix=$(PREFIX) $(ASAN_STATEMENT); ninja -C build; sudo ninja -C build install
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-96550a6d-1.69.2-main.sock
+# environment
+TERM = xterm-256color
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# default
+SUFFIXES := 
+# environment
+VSCODE_CLI = 1
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+VTE_VERSION = 6800
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+# environment
+XDG_MENU_PREFIX = gnome-flashback-
+# makefile (from 'Makefile', line 11)
+SWAY_VERSION = master
+# makefile (from 'Makefile', line 17)
+XDG_DESKTOP_PORTAL_VERSION = master
+# variable set hash-table stats:
+# Load=116/1024=11%, Rehash=0, Collisions=14/155=9%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 2052, inode 1733253): 6 files, no impossibilities.
+
+# 6 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+check-ubuntu-version:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 108):
+	@if [ "$(CURRENT_UBUNTU_CODENAME)" != "$(REQUIRED_UBUNTU_CODENAME)" ]; then echo "### \n#  Unsupported version of ubuntu (current: '$(CURRENT_UBUNTU_CODENAME)', required: '$(REQUIRED_UBUNTU_CODENAME)').\n#  Check this repo's remote branches (git branch -r) to see if your version is there and switch to it (these branches are deprecated but should work for your version)\n###"; exit 1; fi
+
+seatd-build:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 155):
+	make meson-ninja-build -e APP_FOLDER=seatd -e APP_VERSION=$(SEATD_VERSION)
+
+sway-build:
+ 
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 161):
+	make meson-ninja-build -e APP_FOLDER=sway -e APP_VERSION=$(SWAY_VERSION)
+	sudo cp -f $(PWD)/sway/contrib/grimshot /usr/local/bin/
+
+apps: xdg-desktop-portal-wlr-build kanshi-build swaylock-build clipman-build
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-28 01:33:04.879921541
+#  File has been updated.
+#  Successfully updated.
+
+trawl-build:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 165):
+	cd trawl && make install 
+
+wlroots-build:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 158):
+	make meson-ninja-build -e APP_FOLDER=wlroots -e APP_VERSION=$(WLROOTS_VERSION)
+
+printenv:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 185):
+	env
+
+install-dependencies:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+ 
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 130):
+	sudo apt -y install build-essential
+	sudo apt -y install $(BASE_CLI_DEPS)
+	sudo apt -y install --no-install-recommends \
+		$(WAYLAND_DEPS) \
+		$(WLROOTS_DEPS) \
+		$(SWAY_DEPS) \
+		$(TRAWL_DEPS) \
+		$(GTK_LAYER_DEPS) \
+		$(SWAYLOCK_DEPS) \
+		$(CLIPMAN_DEPS) \
+		$(XDG_DESKTOP_PORTAL_DEPS)
+	sudo pip3 install $(PIP_PACKAGES) --upgrade
+	rustc --version || curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+clipman-build:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 175):
+	cd clipman; git fetch; git checkout $(CLIPMAN_VERSION); go install 
+	sudo cp -f ~/go/bin/clipman /usr/local/bin/
+
+meson-ninja-build: check-ubuntu-version
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 151):
+	cd $(APP_FOLDER); git fetch; git checkout $(APP_VERSION); $(NINJA_CLEAN_BUILD_INSTALL)
+
+fix-dependencies:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 145):
+	printf 'n\ny\ny\n' | sudo aptitude  libgbm-dev libjson-c-dev libsystemd-dev  libudev-dev
+
+clean-dependencies:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 148):
+	sudo apt autoremove --purge $(WLROOTS_DEPS) $(SWAY_DEPS) $(GTK_LAYER_DEPS) $(SWAYLOCK_DEPS) $(XDG_DESKTOP_PORTAL_DEPS)
+
+ 
+core: seatd-build wlroots-build trawl-build sway-build
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+all:
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+swaylock-build:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 172):
+	make meson-ninja-build -e APP_FOLDER=swaylock-effects -e APP_VERSION=$(SWAYLOCK_VERSION)
+
+xdg-desktop-portal-wlr-build:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 179):
+	cd xdg-desktop-portal-wlr; git fetch; git checkout $(XDG_DESKTOP_PORTAL_VERSION); $(NINJA_CLEAN_BUILD_INSTALL)
+	sudo ln -sf /usr/local/libexec/xdg-desktop-portal-wlr /usr/libexec/
+	sudo ln -sf /usr/local/share/xdg-desktop-portal/portals/wlr.portal /usr/share/xdg-desktop-portal/portals/
+
+yolo: install-dependencies install-repos core apps
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+kanshi-build:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 169):
+	make meson-ninja-build -e APP_FOLDER=kanshi -e APP_VERSION=$(KANSHI_VERSION)
+
+install-repos:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 117):
+	@git clone https://github.com/regolith-linux/sway.git || echo "Already installed"
+	@git clone https://gitlab.freedesktop.org/wlroots/wlroots.git || echo "Already installed"
+	cd wlroots && mkdir -p subprojects && cd subprojects && git clone https://gitlab.freedesktop.org/wayland/wayland.git || echo "Already installed"
+	@git clone https://git.sr.ht/~emersion/kanshi || echo "Already installed"
+	@git clone https://github.com/mortie/swaylock-effects.git || echo "Already installed"
+	@git clone https://github.com/yory8/clipman.git || echo "Already installed"
+	@git clone https://git.sr.ht/~kennylevinsen/seatd || echo "Already installed"
+	@git clone https://github.com/emersion/xdg-desktop-portal-wlr.git || echo "Already installed"
+	@git clone https://github.com/sardemff7/libgwater.git || echo "Already installed"
+	@git clone https://github.com/regolith-linux/trawl.git || echo "Already installed"
+	@git clone https://github.com/regolith-linux/regolith-displayd.git || echo "Already installed"
+
+# files hash-table stats:
+# Load=22/1024=2%, Rehash=0, Collisions=0/57=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 29 / storage = 349 B / avg = 12 B
+# current buf: size = 8162 B / used = 349 B / count = 29 / avg = 12 B
+
+# strcache performance: lookups = 64 / hit rate = 54%
+# hash-table stats:
+# Load=29/8192=0%, Rehash=0, Collisions=0/64=0%
+# Finished Make data base on Thu Jul 28 01:35:15 2022
+
+ 
