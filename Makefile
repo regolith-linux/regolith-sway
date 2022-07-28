@@ -8,9 +8,8 @@ ifneq ("$(wildcard .env)","")
 endif
 
 # Define here which branches or tags you want to build for each project
-SWAY_VERSION ?= master
-WLROOTS_VERSION ?= master
-WAYLAN_VERSION ?= main
+SWAY_VERSION ?= bcf9a989
+WLROOTS_VERSION ?= 972a5cdf
 KANSHI_VERSION ?= master
 SWAYLOCK_VERSION ?= master
 CLIPMAN_VERSION ?= master
@@ -162,7 +161,7 @@ sway-build:
 	sudo cp -f $(PWD)/sway/contrib/grimshot /usr/local/bin/
 
 trawl-build:
-	cd trawl && make install 
+	cd trawl && make && make install 
 
 ## Apps
 kanshi-build:
