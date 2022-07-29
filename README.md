@@ -1,54 +1,36 @@
-## Note April 2022: kanshi
+# Sway build for Regolith 2.1
+Build system for sway and regolith related tools. Apps provided (make sure you do not install these via Ubuntu's package repos):
 
-The repository for kanshi has changed from github to sr.ht. If you still have the github repository, make sure you delete the `kanshi` folder and run again `make install-repos`. I'll remove this notice at some point in the future.
-
-# Sway builds for Ubuntu 22.04 (amd64)
-
-Ubuntu 22.04 build system for sway and related tools.
-
-Even though most of these tools (including sway and wlroots) are now available in Ubuntu, they move and evolve pretty quickly and I personally prefer to keep up to date with those.
-
-This repository contains a Makefile based build system for all of these. We are NOT building deb packages (see my [old repository which did](https://github.com/luispabon/sway-ubuntu-deb-build) if you want to do so), but we're directly building from source and installing as root.
-
-<!-- This means you should make sure you do not install any of the ubuntu provided packages, and indeed dependents (for instance other tools that depend on wlroots) should also be compiled here. -->
-
-Apps provided (make sure you do not install these via Ubuntu's package repos):
-
-**Core:**
+## Core:
   * Sway
   * Trawl
   * wlroots
   * seatd
 
-**Apps:**
+## Apps:
   * clipman
   * kanshi
   * swaylock-effects
   * xdg-desktop-portal-wlr (for screen sharing)
 
-## Prepare your system's environment
+## Wayland edition of Regolith Uitls:
+**Note**: This will replace preinstalled versions. Although, there shouldn't be any change in user experience for users of X11 edition (with i3).
+  * Ilia
+  * regolith-i3-config
+  * regolith-displayd
+  * regolith-session
+  * regolith-
 
-You must make sure that
+# Preparing System Environment
+## Meson and Ninja
 
-```
-LD_LIBRARY_PATH=/usr/local/lib/x86_64-linux-gnu/
-```
+Make sure you uninstall `meson` and `ninja` if you've already installed them via Ubuntu's package manager. Sway and wlroots routinely require the very latest versions of both, so we'll be installing the latest versions using `python3-pip` instead.
 
-is set on your environment prior to starting Sway. This is required so that any apps you compile here can find each other's library, as they're placed somewhere else than Ubuntu's default library path.
-
-### Note: LD_LIBRARY_PATH on arm
-
-The value will almost certainly be completely different. I don't use arm so I can't check. Please let me know if you know via a GitHub issue or a PR to this file.
-
-### Note: `sudo`
+## Permissions
 
 Some operations require root to complete - typically anything that requires access to '/usr/' or `/usr/local/`. See [Makefile](Makefile) for details.
 
 While building, `sudo` will be run at some point to do so, and your password will be asked.
-
-### Note: `meson` and `ninja`
-
-Make sure you uninstall `meson` and `ninja` if you've already installed them via Ubuntu's package manager. Sway and wlroots routinely require the very latest versions of both, so we'll be installing the latest versions using `python3-pip` instead.
 
 ## Dependencies
 
@@ -62,19 +44,9 @@ First time, you should probably run
 make yolo
 ```
 
-This will clone all the app's git repos, install dev dependencies and tools required to build everything, then it proceeds to build each project in sequence.
+This will clone all the app's git repos, install dev dependencies and tools required to build everything, then it proceeds to build and install each project in sequence.
 
-Have a look at the [Makefile](Makefile) for all the different build targets, in case you want to build this or the other app. I for instance build `wlroots` and `sway` once a week, for which I have
-
-```
-make core
-```
-
-If you just want to update the apps (not wlroots and sway):
-
-```
-make apps
-```
+Have a look at the [Makefile](Makefile) for all the different build targets, in case you want to build this or the other app. 
 
 ### Updating repositories before building
 
@@ -91,10 +63,8 @@ At the top of the [Makefile](Makefile) you'll see one variable per app that defi
 For instance, if I wanted to build wlroots `0.11.0`, sway `1.5` and swaylock-effects `master`, while making sure we're on the absolute latest commits for each:
 
 ```
-make core swaylock-build -e SWAY_VERSION=1.5 -e WLROOTS_VERSION=0.11.0 -e UPDATE=true
+make core ilia -e SWAY_VERSION=1.5 -e WLROOTS_VERSION=0.11.0 -e UPDATE=true
 ```
-
-Note the lack of `SWAYLOCK_VERSION` up there - `master` is already the default.
 
 ### The .env file
 
@@ -184,5 +154,3 @@ Ubuntu's Chromium snap currently does not seem to have webrtc pipewire support.
 
 Open `chrome://flags` and flip `WebRTC PipeWire support` to `enabled`. Should work after that.
 
-## Known issues
- * `fatal error: wlr/render/allocator.h: No such file or directory` or some other similar build errors when building wlroots: the library recently moved from github to freedesktop's gitlab. Simply delete the `wlroots` folder and run `make install-repos`
