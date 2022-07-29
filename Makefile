@@ -14,6 +14,11 @@ KANSHI_VERSION ?= master
 SWAYLOCK_VERSION ?= master
 CLIPMAN_VERSION ?= master
 XDG_DESKTOP_PORTAL_VERSION ?= master
+REGOLITH_SESSION_VERSION ?= sway-session
+REGOLITH_I3_CONFIG_VERSION ?= wayland-dev
+REGOLITH_LOOK_DEFAULT_VERSION ?= wayland-dev
+ILIA_VERSION ?= ubuntu/jammy-wayland
+REGOLITH_DISPLAYD_VERSION ?= master 
 
 ifdef UPDATE
 	UPDATE_STATEMENT = git pull;
@@ -107,9 +112,10 @@ check-ubuntu-version:
 	@if [ "$(CURRENT_UBUNTU_CODENAME)" != "$(REQUIRED_UBUNTU_CODENAME)" ]; then echo "### \n#  Unsupported version of ubuntu (current: '$(CURRENT_UBUNTU_CODENAME)', required: '$(REQUIRED_UBUNTU_CODENAME)').\n#  Check this repo's remote branches (git branch -r) to see if your version is there and switch to it (these branches are deprecated but should work for your version)\n###"; exit 1; fi
 
 ## Meta installation targets
-yolo: install-dependencies install-repos core apps
+yolo: install-dependencies install-repos core apps regolith
 core: seatd-build wlroots-build trawl-build sway-build
 apps: xdg-desktop-portal-wlr-build kanshi-build swaylock-build clipman-build
+regolith: regolith-session-build regolith-i3-config-build regolith-look-default-build ilia-build regolith-displayd-build
 
 ## Build dependencies
 install-repos:
@@ -121,8 +127,9 @@ install-repos:
 	@git clone https://github.com/yory8/clipman.git || echo "Already installed"
 	@git clone https://git.sr.ht/~kennylevinsen/seatd || echo "Already installed"
 	@git clone https://github.com/emersion/xdg-desktop-portal-wlr.git || echo "Already installed"
-	@git clone https://github.com/sardemff7/libgwater.git || echo "Already installed"
 	@git clone https://github.com/regolith-linux/trawl.git || echo "Already installed"
+	@git clone https://github.com/regolith-linux/regolith-session.git || echo "Already Installed"
+	@git clone https://github.com/regolith-linux/regolith-i3-config.git || echo "Already Installed"
 	@git clone https://github.com/regolith-linux/regolith-displayd.git || echo "Already installed"
 
 install-dependencies:
@@ -162,6 +169,22 @@ sway-build:
 
 trawl-build:
 	cd trawl && make && make install 
+
+## Regolith
+regolith-session-build:
+	cd regolith-session; git fetch; git checkout $(REGOLITH_SESSION_VERSION); sudo rsync -avh usr/ /usr/
+
+regolith-i3-config-build:
+	cd regoolith-i3-config; git fetch; git checkout $(REGOLITH_I3_CONFIG_VERSION); make install
+
+regolith-look-default-build:
+	cd regolith-session; git fetch; git checkout $(REGOLITH_LOOK_DEFAULT_VERSION); sudo rsync -avh usr/ /usr/
+
+regolith-displayd-build:
+	cd regolith-displayd;  git fetch; git checkout $(REGOLITH_DISPLAYD_VERSION); make; make install
+
+ilia-build:
+	make meson-ninja-build -e APP_FOLDER=ilia -e APP_VERSION=$(ILIA_VERSION)
 
 ## Apps
 kanshi-build:
