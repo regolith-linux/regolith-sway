@@ -31,3 +31,4 @@ wayland
 ilia
 regolith-look-default
 .vscode
+regolith-i3status-rust

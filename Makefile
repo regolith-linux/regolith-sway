@@ -1,5 +1,6 @@
 REQUIRED_UBUNTU_CODENAME=jammy
 CURRENT_UBUNTU_CODENAME=$(shell lsb_release -cs)
+USER_XRESOURCE_OVERRIDE_FILE="$(HOME)/.config/regolith2/Xresources"
 
 # Include environment overrides
 ifneq ("$(wildcard .env)","")
@@ -8,7 +9,7 @@ ifneq ("$(wildcard .env)","")
 endif
 
 # Define here which branches or tags you want to build for each project
-SWAY_VERSION ?= bcf9a989
+SWAY_VERSION ?= 0db059b8
 WLROOTS_VERSION ?= 972a5cdf
 WAYLAND_VERSION ?= main
 KANSHI_VERSION ?= master
@@ -22,6 +23,7 @@ REGOLITH_FTUE_VERSION ?= sway-session
 LAYER_SHELL_VERSION ?= master
 ILIA_VERSION ?= ubuntu/jammy-wayland
 REGOLITH_DISPLAYD_VERSION ?= master 
+I3_STATUS_VERSION ?= master
 
 ifdef UPDATE
 	UPDATE_STATEMENT = git pull;
@@ -124,6 +126,11 @@ define XDG_DESKTOP_PORTAL_DEPS
 	libinih-dev
 endef
 
+define I3STATUS_RS_DEPS
+	openssl \
+	libssl-dev
+endef
+
 PIP_PACKAGES=ninja meson
 
 NINJA_CLEAN_BUILD_INSTALL=$(UPDATE_STATEMENT) sudo ninja -C build uninstall; sudo rm build -rf; meson build --prefix=$(PREFIX) $(ASAN_STATEMENT); ninja -C build; sudo ninja -C build install
@@ -136,7 +143,7 @@ check-ubuntu-version:
 yolo: install-dependencies install-repos core apps regolith
 core: seatd-build wayland-build wlroots-build trawl-build sway-build
 apps: xdg-desktop-portal-wlr-build kanshi-build swaylock-build clipman-build
-regolith: regolith-session-build regolith-i3-config-build regolith-look-default-build ilia-build regolith-displayd-build regolith-ftue-build
+regolith: regolith-session-build regolith-i3-config-build regolith-look-default-build ilia-build regolith-displayd-build regolith-ftue-build i3status-rs-build
 
 ## Build dependencies
 install-repos:
@@ -156,6 +163,7 @@ install-repos:
 	@git clone https://github.com/regolith-linux/ilia.git || echo "Already installed"
 	@git clone https://github.com/wmww/gtk-layer-shell.git || echo "Already installed"
 	@git clone https://github.com/regolith-linux/regolith-ftue.git || echo "Already installed"
+	@git clone https://github.com/cfsmp3/regolith-i3status-rust.git || echo "Already installed"
 
 install-dependencies:
 	sudo apt -y remove --purge libwayland-dev libwayland-bin
@@ -167,6 +175,7 @@ install-dependencies:
 		$(SWAY_DEPS) \
 		$(ILIA_DEPS) \
 		$(TRAWL_DEPS) \
+		$(I3STATUS_RS_DEPS) \
 		$(GTK_LAYER_DEPS) \
 		$(SWAYLOCK_DEPS) \
 		$(CLIPMAN_DEPS) \
@@ -225,6 +234,9 @@ ilia-build:
 	make layer-shell-build
 	make meson-ninja-build -e APP_FOLDER=ilia -e APP_VERSION=$(ILIA_VERSION)
 
+i3status-rs-build:
+	cd regolith-i3status-rust; cargo build --release; sudo cp target/release/i3status-rs /usr/bin/; sudo ./install.sh
+
 ## Apps
 kanshi-build:
 	make meson-ninja-build -e APP_FOLDER=kanshi -e APP_VERSION=$(KANSHI_VERSION)
@@ -240,6 +252,14 @@ xdg-desktop-portal-wlr-build:
 	cd xdg-desktop-portal-wlr; git fetch; git checkout $(XDG_DESKTOP_PORTAL_VERSION); $(NINJA_CLEAN_BUILD_INSTALL)
 	sudo ln -sf /usr/local/libexec/xdg-desktop-portal-wlr /usr/libexec/
 	sudo ln -sf /usr/local/share/xdg-desktop-portal/portals/wlr.portal /usr/share/xdg-desktop-portal/portals/
+
+# Misc
+enable_i3status_rs:
+	mkdir -p ~/.config/regolith2/
+	cat regolith-i3status-rust/examples/config.toml | tail +4 >  ~/.config/regolith2/i3status-rs.toml
+	sed -i '/^!i3-wm.bar.status_command/d' "$(USER_XRESOURCE_OVERRIDE_FILE)"
+	sed -i 's/^i3-wm.bar.status_command/\!i3-wm.bar.status_command/g' "$(USER_XRESOURCE_OVERRIDE_FILE)"
+	echo "i3-wm.bar.status_command: /usr/bin/i3status-rs ~/.config/regolith2/i3status-rs.toml" >> "$(USER_XRESOURCE_OVERRIDE_FILE)"
 
 ## Debugging
 printenv:

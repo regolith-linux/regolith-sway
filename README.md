@@ -105,6 +105,15 @@ If you deleted the `build` folder on the app, simply build the app again (on the
 
 This goes without saying, but if you're updating `wlroots` or `seatd` make sure they're built first (`seatd`, then `wlroots`) so that any of the other apps that link against it (like `sway`) have the right version to link against instead of linking against the version you're replacing.
 
+## i3status-rust
+In most cases i3xrocks wouldn't work well with swaybar. i3status-rust has several advantages over i3xrocks, but the one advantage that we need to focus in our use case is its support for sway. To enable i3status-rust, use the following build-target
+
+```
+make enable_i3status_rs
+```
+
+This will copy the example config into the '~/.config/regolith2/i3status-rs.toml' file and set 'i3-wm.bar.status\_command' to i3status-rust in the '~/.config/regolith2/Xresources` file. If you have already defined a status command, it will be commented out from the Xresources file to avoid duplicate rersources. You might have to refresh the xresorces to see the changes.
+
 ## Screen sharing
 
 Ubuntu 22.04 comes with all the plumbing to make it all work:
