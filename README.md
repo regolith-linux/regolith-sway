@@ -22,6 +22,16 @@ Build system for sway and regolith related tools. Apps provided (make sure you d
   * regolith-
 
 # Preparing System Environment
+## Display manager
+
+While LightDM has good wayland support, the greeter used by regolith 2.0 seems to have several issues while launching wayland sessions. Regolith 1.6 greeter didn't suffer from these issues. IIf you face any issues like blank screen, no display, or wrong session launch, LightDM is probably the culprit. You should probably temporarily switch to another Display Manager that supports wayland in the meantime. SDDM seems to work fine based on initial testing. Ly is another good alternative as it claims to work "very well" with sway.
+
+To install SDDM, use the following command
+```
+sudo apt install sddm
+```
+During the installation, you may be asked to select the display manager that you want to use. Select sddm. You can change this by disabling the service file for sddm and enabling lightdm from systemd.
+
 ## Meson and Ninja
 
 Make sure you uninstall `meson` and `ninja` if you've already installed them via Ubuntu's package manager. Sway and wlroots routinely require the very latest versions of both, so we'll be installing the latest versions using `python3-pip` instead.
