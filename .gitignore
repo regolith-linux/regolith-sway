@@ -23,4 +23,11 @@ rofi
 libgwater
 trawl
 regolith-displayd
+regolith-session
+regolith-i3-config
+regolith-ftue
+gtk-layer-shell
+wayland
+ilia
+regolith-look-default
 .vscode
