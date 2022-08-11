@@ -1,6 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: libtrawldb
-Upstream-Contact: <https://github.com/regolith-linux/trawlc>
+Upstream-Contact: <https://github.com/regolith-linux/trawl-api>
 Source: <preferred name and address to reach the upstream project>
 #
 # Please double check copyright with the licensecheck(1) command.
