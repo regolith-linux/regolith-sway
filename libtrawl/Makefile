@@ -18,11 +18,11 @@ binary-arch: build
 binary-independent: build
 
 build: setup
-	cd build; meson compile
+	cd build; ninja
 
 setup:
 	scripts/run_codegen.sh service.xml config_manager.c config_manager.h
 	meson build --prefix=$(PREFIX)
 
 install:
-	cd build; meson install
+	cd build; ninja install
