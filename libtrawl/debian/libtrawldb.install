@@ -1,0 +1,5 @@
+/usr/include/trawldb/*
+/usr/lib/libtrawl-client.so
+/usr/lib/libtrawl-client.so.0
+/usr/lib/libtrawl-client.so.0.1
+/usr/lib/pkgconfig/trawldb-0.pc

@@ -1,0 +1,5 @@
+build/
+builddir/
+config_manager.h
+config_manager.c
+.cache/

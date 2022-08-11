@@ -1,0 +1,32 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: libtrawldb
+Upstream-Contact: <https://github.com/regolith-linux/trawlc>
+Source: <preferred name and address to reach the upstream project>
+#
+# Please double check copyright with the licensecheck(1) command.
+
+Files:     .gitignore
+           Makefile
+           .gitignore
+           client_api.c
+           client_api.h
+           example/main.c
+           example/meson.build
+           meson.build
+           scripts/run_codegen.sh
+           scripts/uninstall.sh
+           service.xml
+
+License:   __UNKNOWN__
+ Licensed under either of
+ .
+ * [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
+ .
+ * [MIT license](http://opensource.org/licenses/MIT)
+ .
+ at your option.
+
+
+#----------------------------------------------------------------------------
+# Files marked as NO_LICENSE_TEXT_FOUND may be covered by the following
+# license/copyright files.
