@@ -11,8 +11,3 @@ Multi-Arch: foreign
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: C library to interact with trawl.
 
-Package: libtrawldb-dev
-Architecture: any
-Multi-Arch: foreign
-Depends: ${misc:Depends}, ${shlibs:Depends}
-Description: C library to interact with trawl.
