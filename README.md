@@ -1,4 +1,6 @@
 # Sway build for Regolith 2.1
+> **Note**: This repository is no longer maintained and the sway based wayland session for Regoliith is available officially since Regolith 3.1
+
 Build system for sway and regolith related tools. Apps provided (make sure you do not install these via Ubuntu's package repos):
 
 ## Core:
